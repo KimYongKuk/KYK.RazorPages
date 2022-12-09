@@ -1,4 +1,10 @@
-@page 
+@page "{id}"
+
+
+@{
+    //var id = int.Parse(Convert.ToString(RouteData.Values["id"]));
+    var id = int.Parse((string)RouteData.Values["id"]);
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,13 +13,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Modern Business - Start Bootstrap Template</title>
+        <title>Blog Details - @id</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    @*<link href="~/wwwroot/dashboard/css/styles.css" rel="stylesheet" />*@
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body class="d-flex flex-column">
         <main class="flex-shrink-0">
